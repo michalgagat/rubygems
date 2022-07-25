@@ -144,9 +144,9 @@ RSpec.describe "bundle add" do
 
   describe "with --github and --branch" do
     it "adds dependency with specified github source and branch" do
-      bundle "add rake --github=ruby/rake --branch=master"
+      bundle "add rake --github=ruby/rake --branch=main"
 
-      expect(bundled_app_gemfile.read).to match(%r{gem "rake", "~> 13\.0", :github => "ruby\/rake", :branch => "master"})
+      expect(bundled_app_gemfile.read).to match(%r{gem "rake", "~> 13\.0", :github => "ruby\/rake", :branch => "main"})
     end
   end
 
